@@ -1,30 +1,10 @@
-import albaneagra
+from Deposit import deposit
+from Menu import menu
+from flipacoin import albaneagra
 
-def deposit():
-    amount = input("How much would you like to deposit? $")
-    while not amount.isdigit() or int(amount) < 0:
-        print("You have to enter a valid positive number. ")
-        amount = input("How much would you like to deposit? $")
-
-    return amount
+balance = 0
 
 balance = int(deposit())
-
-def menu():
-    print("What would you like to do? ")
-    print("1. Check your balance. ")
-    print("2. Add to your balance. ")
-    print("3. Play Flip-a-Coin. ")
-    print("Press Q to quit. ")
-
-    alegere = input("What is your choice? ")
-
-    results = {"1", "2", "3", "Q", "q"}
-
-    while alegere not in results:
-        print("Please input a valid choice(1, 2, 3): ")
-        alegere = input("What is your choice? ")
-    return alegere
 
 alegere = menu()
 
@@ -40,9 +20,11 @@ while alegere != "q" and alegere != "Q":
             print(f"Your new balance is now: {balance}$")
         else:
             print("Please input a valid number. ")
+    elif alegere == "3":
+        balance = albaneagra(balance)
     alegere = menu()
 
-
+print(balance)
 #pana aici
 
 

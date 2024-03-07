@@ -1,10 +1,10 @@
 import random
 import time
 
-def albaneagra():
+def albaneagra(balance):
     print("Welcome to Flip-a-Coin")
 
-    bet = input("How much would you like to bet? $")
+    bet = int(input("How much would you like to bet? $"))
     choice = input("Heads or Tails? ").lower()
     print("You have chosen:",choice)
 
@@ -24,10 +24,15 @@ def albaneagra():
 
     if choice == "heads" and result == 1:
         print("You have won")
+        balance = balance + bet
     elif choice == "heads" and result == 0:
         print("You have lost")
+        balance = balance - bet
     elif choice == "tails" and result == 1:
         print("You have lost")
+        balance = balance - bet
     else:
         print("You have won")
+        balance = balance + bet
+    return balance
 
