@@ -1,7 +1,7 @@
 from Deposit import deposit
 from Menu import menu
 from flipacoin import albaneagra
-
+from russianroulette import russianrou
 balance = 0
 
 balance = int(deposit())
@@ -22,11 +22,13 @@ while alegere != "q" and alegere != "Q":
             print("Please input a valid number. ")
     elif alegere == "3":
         balance = albaneagra(balance)
+    elif alegere == "4":
+        balance = russianrou(balance)
     alegere = menu()
 
 print(balance)
-#pana aici
 
+#bet shouln't be bigger than the balance
 
 
 

@@ -23,16 +23,22 @@ def albaneagra(balance):
         print("Heads")
 
     if choice == "heads" and result == 1:
-        print("You have won")
         balance = balance + bet
+        print(f"You have won: ${bet}")
+        print(f"Your new balance is now: ${balance}")
     elif choice == "heads" and result == 0:
-        print("You have lost")
         balance = balance - bet
+        print(f"You have lost: ${bet}")
+        print(f"Your new balance is now: ${balance}")
     elif choice == "tails" and result == 1:
-        print("You have lost")
         balance = balance - bet
+        print(f"You have lost: ${bet}")
+        print(f"Your new balance is now: ${balance}")
     else:
-        print("You have won")
         balance = balance + bet
+        print(f"You have won: ${bet}")
+        print(f"Your new balance is now: ${balance}")
     return balance
+
+
 
